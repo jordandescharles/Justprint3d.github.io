@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Just Printed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="logo-img">
+                    <span class="logo-text">Just Printed</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="catalogue.html" class="nav-link">Catalogue</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Contact -->
+    <section class="contact-hero" data-parallax="true">
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="page-title">Contactez-nous</h1>
+                <p class="page-subtitle">Partagez votre projet, nous vous accompagnons de A à Z</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Accueil</a> <span>/</span> <span>Contact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2>Démarrons votre projet</h2>
+                        <p>Remplissez ce formulaire et nous vous recontacterons dans les 24h</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" action="#" method="POST">
+                        <!-- Honeypot pour les bots -->
+                        <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Entreprise</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectType">Type de projet *</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="impression">Service d'impression 3D</option>
+                                <option value="creation">Création/Conception 3D</option>
+                                <option value="lightbox">Lightbox personnalisée</option>
+                                <option value="prototype">Prototypage</option>
+                                <option value="series">Production en série</option>
+                                <option value="other">Autre projet</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Délai souhaité</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Pas de contrainte particulière</option>
+                                <option value="urgent">Urgent (24-48h)</option>
+                                <option value="week">Cette semaine</option>
+                                <option value="month">Ce mois-ci</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget approximatif</label>
+                            <select id="budget" name="budget">
+                                <option value="">Non déterminé</option>
+                                <option value="0-50">0 - 50€</option>
+                                <option value="50-150">50 - 150€</option>
+                                <option value="150-500">150 - 500€</option>
+                                <option value="500+">500€ et plus</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Description de votre projet *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet en détail : dimensions, matériaux souhaités, quantité, utilisation prévue..." required></textarea>
+                        </div>
+
+                        <div class="form-group file-upload">
+                            <label for="files">Fichiers joints (optionnel)</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="files" name="files" multiple accept=".stl,.obj,.3mf,.jpg,.jpeg,.png,.pdf,.dwg">
+                                <div class="file-input-content">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Glissez vos fichiers ici ou cliquez pour parcourir</span>
+                                    <small>Formats acceptés : STL, OBJ, 3MF, JPG, PNG, PDF, DWG (max 10MB par fichier)</small>
+                                </div>
+                            </div>
+                            <div class="file-list" id="fileList"></div>
+                        </div>
+
+                        <!-- Protection anti-spam simple -->
+                        <div class="form-group anti-spam">
+                            <label for="antiSpam">Vérification anti-spam : Combien font 7 + 3 ? *</label>
+                            <input type="text" id="antiSpam" name="antiSpam" required placeholder="Entrez le résultat">
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                J'accepte que mes données soient utilisées pour me recontacter concernant ma demande *
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Je souhaite recevoir des informations sur les nouveautés et offres spéciales
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
+                                <span class="btn-text">Envoyer ma demande</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Envoi en cours...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <div class="success-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Merci pour votre message !</h3>
+                            <p>Nous avons bien reçu votre demande et vous recontacterons dans les plus brefs délais.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>Informations de contact</h3>
+                            <p>Plusieurs moyens de nous joindre</p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Email</h4>
+                                    <p>contact@justprinted.fr</p>
+                                    <small>Réponse sous 24h</small>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Téléphone</h4>
+                                    <p>+33 1 23 45 67 89</p>
+                                    <small>Lun-Ven 9h-18h</small>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Adresse</h4>
+                                    <p>123 Rue de l'Innovation<br>75001 Paris, France</p>
+                                    <small>Sur rendez-vous</small>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Horaires</h4>
+                                    <p>Lun-Ven : 9h-18h<br>Sam : 10h-16h</p>
+                                    <small>Fermé le dimanche</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>Pourquoi nous choisir ?</h3>
+                        </div>
+                        <div class="advantages">
+                            <div class="advantage">
+                                <i class="fas fa-award"></i>
+                                <span>Expertise reconnue depuis 2020</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Livraison rapide 24-48h</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>100% satisfaction client</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-tools"></i>
+                                <span>Équipements dernière génération</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-euro-sign"></i>
+                                <span>Tarifs compétitifs</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-headset"></i>
+                                <span>Support technique inclus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>FAQ Express</h3>
+                        </div>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <h4>Quel est le délai moyen ?</h4>
+                                <p>2-5 jours selon la complexité</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Livraison possible ?</h4>
+                                <p>Oui, partout en France</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Formats de fichiers ?</h4>
+                                <p>STL, OBJ, 3MF principalement</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Devis gratuit ?</h4>
+                                <p>Toujours, sans engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="footer-logo-img">
+                    <p>Créations et Impressions 3D</p>
+                </div>
+                <div class="footer-info">
+                    <p>Excellence en impression 3D</p>
+                    <p>Votre partenaire créatif</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Just Printed. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Vérification anti-spam
+            const antiSpam = document.getElementById('antiSpam').value;
+            if (antiSpam !== "10") {
+                alert('Erreur de vérification anti-spam.');
+                return;
+            }
+
+            // Vérification honeypot
+            const honeypot = document.querySelector('input[name="website"]').value;
+            if (honeypot !== "") {
+                return; // Bot détecté, ignore silencieusement
+            }
+
+            // Simulation d'envoi (à remplacer par un vrai service)
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+
+            // Simuler l'envoi
+            setTimeout(() => {
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('formSuccess').style.display = 'block';
+            }, 2000);
+        });
+
+        // File upload handling
+        const fileInput = document.getElementById('files');
+        const fileList = document.getElementById('fileList');
+        const fileInputWrapper = document.querySelector('.file-input-wrapper');
+
+        fileInput.addEventListener('change', handleFileSelect);
+
+        // Drag and drop
+        fileInputWrapper.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileInputWrapper.classList.add('dragover');
+        });
+
+        fileInputWrapper.addEventListener('dragleave', () => {
+            fileInputWrapper.classList.remove('dragover');
+        });
+
+        fileInputWrapper.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileInputWrapper.classList.remove('dragover');
+            handleFileSelect({ target: { files: e.dataTransfer.files } });
+        });
+
+        function handleFileSelect(e) {
+            const files = Array.from(e.target.files);
+            fileList.innerHTML = '';
+            
+            files.forEach((file, index) => {
+                if (file.size > 10 * 1024 * 1024) { // 10MB limit
+                    alert(`Le fichier ${file.name} est trop volumineux (max 10MB)`);
+                    return;
+                }
+
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <i class="fas fa-file"></i>
+                    <span class="file-name">${file.name}</span>
+                    <span class="file-size">(${(file.size / 1024 / 1024).toFixed(2)} MB)</span>
+                    <button type="button" class="remove-file" onclick="removeFile(${index})">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+                fileList.appendChild(fileItem);
+            });
+        }
+
+        function removeFile(index) {
+            const dt = new DataTransfer();
+            const files = Array.from(fileInput.files);
+            
+            files.forEach((file, i) => {
+                if (i !== index) dt.items.add(file);
+            });
+            
+            fileInput.files = dt.files;
+            handleFileSelect({ target: { files: dt.files } });
+        }
+
+        // Form validation
+        const form = document.getElementById('contactForm');
+        const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+
+        inputs.forEach(input => {
+            input.addEventListener('blur', validateField);
+            input.addEventListener('input', clearError);
+        });
+
+        function validateField(e) {
+            const field = e.target;
+            const value = field.value.trim();
+            
+            field.classList.remove('error');
+            
+            if (!value && field.required) {
+                showFieldError(field, 'Ce champ est obligatoire');
+                return false;
+            }
+            
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    showFieldError(field, 'Email invalide');
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+
+        function showFieldError(field, message) {
+            field.classList.add('error');
+            let errorMsg = field.parentNode.querySelector('.error-message');
+            if (!errorMsg) {
+                errorMsg = document.createElement('span');
+                errorMsg.className = 'error-message';
+                field.parentNode.appendChild(errorMsg);
+            }
+            errorMsg.textContent = message;
+        }
+
+        function clearError(e) {
+            const field = e.target;
+            field.classList.remove('error');
+            const errorMsg = field.parentNode.querySelector('.error-message');
+            if (errorMsg) errorMsg.remove();
+        }
+    </script>
+</body>
+</html>

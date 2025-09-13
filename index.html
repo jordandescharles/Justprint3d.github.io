@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Printed - Bientôt disponible</title>
+    <title>Just Printed - Impression 3D & Création</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -14,25 +15,106 @@
             <div class="nav-container">
                 <div class="logo">
                     <img src="Logo-small.jpg" alt="Just Printed Logo" class="logo-img">
+                    <span class="logo-text">Just Printed</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link active">Accueil</a>
+                    <a href="catalogue.html" class="nav-link">Catalogue</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section avec Parallax -->
+    <section class="hero" data-parallax="true">
+        <div class="hero-bg-overlay"></div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Bientôt disponible</h1>
-                <p class="hero-subtitle">Just Printed arrive très prochainement avec ses services d'impression 3D</p>
-                <div class="coming-soon">
-                    <div class="countdown">
-                        <span class="countdown-text">Site en construction</span>
+                <h1 class="hero-title">L'impression 3D <span class="highlight">nouvelle génération</span></h1>
+                <p class="hero-subtitle">Donnez vie à vos idées avec nos imprimantes 3D de pointe et notre expertise en conception. De la modélisation à la réalisation, nous transformons vos projets en réalité.</p>
+                <div class="hero-buttons">
+                    <a href="catalogue.html" class="btn btn-primary">Découvrir nos services</a>
+                    <a href="contact.html" class="btn btn-secondary">Demander un devis</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projets réalisés</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24h</span>
+                        <span class="stat-label">Délai moyen</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction client</span>
                     </div>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="Logo-small.jpg" alt="Just Printed Logo" class="hero-logo">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Imprimante 3D Bambu A1" class="hero-main-img">
+                <div class="floating-elements">
+                    <div class="floating-element" data-speed="2"></div>
+                    <div class="floating-element" data-speed="3"></div>
+                    <div class="floating-element" data-speed="1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qu'est-ce que l'impression 3D Section -->
+    <section class="about-3d" data-parallax="bg">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Qu'est-ce que l'impression 3D ?</h2>
+                <p class="section-subtitle">Une révolution technologique qui transforme la façon dont nous créons</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="content-block">
+                        <h3>Une technologie révolutionnaire</h3>
+                        <p>L'impression 3D, aussi appelée fabrication additive, consiste à créer des objets physiques en superposant des couches de matériau. Cette technologie permet de produire des pièces complexes, personnalisées et fonctionnelles directement à partir d'un fichier numérique.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Pourquoi choisir l'impression 3D ?</h3>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-rocket"></i> <strong>Prototypage rapide :</strong> De l'idée à l'objet en quelques heures</li>
+                            <li><i class="fas fa-cog"></i> <strong>Personnalisation :</strong> Chaque pièce peut être unique</li>
+                            <li><i class="fas fa-leaf"></i> <strong>Économique :</strong> Réduction des coûts de production</li>
+                            <li><i class="fas fa-lightbulb"></i> <strong>Innovation :</strong> Formes impossibles avec les méthodes traditionnelles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-icon"><i class="fas fa-draw-polygon"></i></div>
+                            <h4>1. Conception</h4>
+                            <p>Modélisation 3D de votre projet</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fas fa-sliders-h"></i></div>
+                            <h4>2. Préparation</h4>
+                            <p>Optimisation et paramétrage</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fas fa-print"></i></div>
+                            <h4>3. Impression</h4>
+                            <p>Fabrication couche par couche</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fas fa-tools"></i></div>
+                            <h4>4. Finition</h4>
+                            <p>Post-traitement et livraison</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -40,22 +122,62 @@
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">Nos Services</h2>
+            <h2 class="section-title">Nos Expertises</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🖨️</div>
+                    <div class="service-icon"><i class="fas fa-print"></i></div>
                     <h3>Impression 3D</h3>
-                    <p>Prototypage rapide et production de pièces sur mesure avec nos imprimantes 3D de dernière génération.</p>
+                    <p>Prototypage rapide et production de pièces sur mesure avec nos imprimantes 3D de dernière génération. Technologies FDM haute précision disponibles.</p>
+                    <div class="service-features">
+                        <span class="feature">PLA</span>
+                        <span class="feature">ABS</span>
+                        <span class="feature">PETG</span>
+                        <span class="feature">TPU</span>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">✏️</div>
+                    <div class="service-icon"><i class="fas fa-cube"></i></div>
                     <h3>Conception 3D</h3>
-                    <p>Modélisation et design de vos projets avec des logiciels professionnels pour un résultat optimal.</p>
+                    <p>Modélisation et design de vos projets avec des logiciels professionnels pour un résultat optimal. De l'esquisse au fichier 3D prêt à imprimer.</p>
+                    <div class="service-features">
+                        <span class="feature">Fusion 360</span>
+                        <span class="feature">SolidWorks</span>
+                        <span class="feature">Blender</span>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Création graphique</h3>
-                    <p>Conception de logos, identités visuelles et supports graphiques pour valoriser votre image de marque.</p>
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Création Personnalisée</h3>
+                    <p>Objets décoratifs, lightboxes, pièces fonctionnelles... Nous donnons vie à toutes vos idées créatives avec une approche sur mesure.</p>
+                    <div class="service-features">
+                        <span class="feature">Lightbox</span>
+                        <span class="feature">Figurines</span>
+                        <span class="feature">Outillage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies" data-parallax="bg">
+        <div class="container">
+            <h2 class="section-title">Nos Technologies</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="https://images.unsplash.com/photo-1606584132732-9e93f4a4e4c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Imprimante FDM">
+                    <h3>FDM/FFF</h3>
+                    <p>Technologie de dépôt de matière fondue, idéale pour le prototypage et les pièces fonctionnelles.</p>
+                </div>
+                <div class="tech-item">
+                    <img src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Filaments 3D">
+                    <h3>Matériaux Premium</h3>
+                    <p>Large gamme de filaments haute qualité pour tous types de projets, du prototype à la pièce finale.</p>
+                </div>
+                <div class="tech-item">
+                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Post-traitement">
+                    <h3>Post-traitement</h3>
+                    <p>Finitions, ponçage, peinture et assemblage pour un résultat professionnel.</p>
                 </div>
             </div>
         </div>
