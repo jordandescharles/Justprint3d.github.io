@@ -275,10 +275,9 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <div class="logo">
-                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="logo-img">
-                    <span class="logo-text">Just Printed</span>
-                </div>
+                <a href="index.html" class="logo">
+                    <img src="Logo-small-long.png" alt="Just Printed Logo" class="logo-img">
+                </a>
                 <div class="nav-menu">
                     <a href="index.html" class="nav-link">Accueil</a>
                     <a href="catalogue.html" class="nav-link active">Catalogue</a>
@@ -336,7 +335,7 @@
                         <div class="product-features">
                             <h4>Caractéristiques :</h4>
                             <ul>
-                                <li><i class="fas fa-check"></i> Dimensions personnalisables (10x10cm à 50x50cm)</li>
+                                <li><i class="fas fa-check"></i> Dimensions personnalisables (10x10cm à 25x25cm)</li>
                                 <li><i class="fas fa-check"></i> Éclairage LED intégré</li>
                                 <li><i class="fas fa-check"></i> Matériaux : PLA translucide ou PETG</li>
                                 <li><i class="fas fa-check"></i> Gravure ou impression d'images possible</li>
@@ -347,10 +346,7 @@
                         <div class="product-specs">
                             <h4>Options disponibles :</h4>
                             <div class="specs-grid">
-                                <div class="spec-item">
-                                    <strong>Tailles :</strong>
-                                    <span>S (15x15cm), M (25x25cm), L (40x40cm), XL (sur mesure)</span>
-                                </div>
+
                                 <div class="spec-item">
                                     <strong>Couleurs :</strong>
                                     <span>Blanc, transparent, couleurs personnalisées</span>
@@ -409,7 +405,7 @@
                             <ul>
                                 <li><i class="fas fa-check"></i> <strong>FDM :</strong> PLA, ABS, PETG, TPU, Wood, Metal Fill</li>
                                 <li><i class="fas fa-check"></i> <strong>Qualité :</strong> Couches de 0,1mm à 0,3mm</li>
-                                <li><i class="fas fa-check"></i> <strong>Volume max :</strong> 300x300x300mm</li>
+                                <li><i class="fas fa-check"></i> <strong>Volume max :</strong> 250x250x250mm</li>
                                 <li><i class="fas fa-check"></i> <strong>Support :</strong> Génération automatique ou manuel</li>
                                 <li><i class="fas fa-check"></i> <strong>Finitions :</strong> Ponçage et post-traitement disponibles</li>
                             </ul>
@@ -522,8 +518,8 @@
                 <p>Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé</p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="btn btn-primary btn-large">Demander un devis gratuit</a>
-                    <a href="mailto:contact@justprinted.fr" class="btn btn-secondary btn-large">
-                        <i class="fas fa-envelope"></i> contact@justprinted.fr
+                    <a href="mailto:contact@justprint3d.fr" class="btn btn-secondary btn-large">
+                        <i class="fas fa-envelope"></i> contact@justprint3d.fr
                     </a>
                 </div>
             </div>
@@ -531,22 +527,95 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" itemscope itemtype="https://schema.org/LocalBusiness">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="footer-logo-img">
-                    <p>Créations et Impressions 3D</p>
+                <!-- Entreprise -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="Logo-small-long-footer.png" alt="Just Printed - Impression 3D professionnelle" class="footer-logo-img">
+                        <h3 itemprop="name">Just Printed</h3>
+                        <p itemprop="description">Spécialiste impression 3D, prototypage rapide, pièces sur-mesure. Service professionnel FDM/FFF - PLA, ABS, PETG, TPU.</p>
+                    </div>
                 </div>
-                <div class="footer-info">
-                    <p>Excellence en impression 3D</p>
-                    <p>Votre partenaire créatif</p>
+
+                <!-- Navigation -->
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Impression 3D</a></li>
+                        <li><a href="catalogue.html">Catalogue & Tarifs</a></li>
+                        <li><a href="contact.html">Devis Gratuit</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spécialités -->
+                <div class="footer-section">
+                    <h4>Spécialités</h4>
+                    <ul class="footer-links">
+                        <li>Prototypage rapide</li>
+                        <li>Pièces mécaniques</li>
+                        <li>Objets décoratifs</li>
+                        <li>Pièces sur-mesure</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="footer-contact" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@justprint3d.fr" itemprop="email">contact@justprint3d.fr</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span itemprop="areaServed">France métropolitaine</span></p>
+                        <p><i class="fas fa-clock"></i> <span itemprop="hoursAvailable">Devis sous 24h</span></p>
+                    </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Just Printed. Tous droits réservés.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Just Printed - Impression 3D professionnelle. Tous droits réservés.</p>
+                    <div class="footer-links-legal">
+                        <a href="contact.html">Mentions légales</a>
+                        <a href="contact.html">CGV</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Just Printed",
+            "description": "Spécialiste en impression 3D professionnelle, prototypage rapide et fabrication de pièces sur-mesure. Technologies FDM/FFF, matériaux PLA, ABS, PETG, TPU.",
+            "email": "contact@justprint3d.fr",
+            "areaServed": "France",
+            "serviceType": "Impression 3D",
+            "priceRange": "€€",
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "sameAs": ["https://justprint3d.github.io"],
+            "offers": [
+                {
+                    "@type": "Service",
+                    "name": "Impression 3D FDM",
+                    "description": "Impression 3D professionnelle en PLA, ABS, PETG, TPU"
+                },
+                {
+                    "@type": "Service", 
+                    "name": "Prototypage rapide",
+                    "description": "Développement rapide de prototypes fonctionnels"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Pièces sur-mesure",
+                    "description": "Fabrication de pièces mécaniques et décoratives personnalisées"
+                }
+            ]
+        }
+        </script>
     </footer>
 
     <!-- Modal Gallery -->

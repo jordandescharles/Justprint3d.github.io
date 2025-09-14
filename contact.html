@@ -13,10 +13,9 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <div class="logo">
-                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="logo-img">
-                    <span class="logo-text">Just Printed</span>
-                </div>
+                <a href="index.html" class="logo">
+                    <img src="Logo-small-long.png" alt="Just Printed Logo" class="logo-img">
+                </a>
                 <div class="nav-menu">
                     <a href="index.html" class="nav-link">Accueil</a>
                     <a href="catalogue.html" class="nav-link">Catalogue</a>
@@ -102,34 +101,13 @@
                         </div>
 
 
-                        <div class="form-group">
-                            <label for="budget">Budget approximatif</label>
-                            <select id="budget" name="budget">
-                                <option value="">Non déterminé</option>
-                                <option value="0-50">0 - 50€</option>
-                                <option value="50-150">50 - 150€</option>
-                                <option value="150-500">150 - 500€</option>
-                                <option value="500+">500€ et plus</option>
-                            </select>
-                        </div>
-
+                       
+                        
                         <div class="form-group">
                             <label for="message">Description de votre projet *</label>
                             <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet en détail : dimensions, matériaux souhaités, quantité, utilisation prévue..." required></textarea>
                         </div>
 
-                        <div class="form-group file-upload">
-                            <label for="files">Fichiers joints (optionnel)</label>
-                            <div class="file-input-wrapper">
-                                <input type="file" id="files" name="files" multiple accept=".stl,.obj,.3mf,.jpg,.jpeg,.png,.pdf,.dwg">
-                                <div class="file-input-content">
-                                    <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Glissez vos fichiers ici ou cliquez pour parcourir</span>
-                                    <small>Formats acceptés : STL, OBJ, 3MF, JPG, PNG, PDF, DWG (max 10MB par fichier)</small>
-                                </div>
-                            </div>
-                            <div class="file-list" id="fileList"></div>
-                        </div>
 
                         <!-- Protection anti-spam simple -->
                         <div class="form-group anti-spam">
@@ -188,7 +166,7 @@
                                 </div>
                                 <div class="method-content">
                                     <h4>Email</h4>
-                                    <p>contact@justprinted.fr</p>
+                                    <p>contact@justprint3d.fr</p>
                                     <small>Réponse rapide</small>
                                 </div>
                             </div>
@@ -262,26 +240,104 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" itemscope itemtype="https://schema.org/LocalBusiness">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="footer-logo-img">
-                    <p>Créations et Impressions 3D</p>
+                <!-- Entreprise -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="Logo-small-long-footer.png" alt="Just Printed - Impression 3D professionnelle" class="footer-logo-img">
+                        <h3 itemprop="name">Just Printed</h3>
+                        <p itemprop="description">Spécialiste impression 3D, prototypage rapide, pièces sur-mesure. Service professionnel FDM/FFF - PLA, ABS, PETG, TPU.</p>
+                    </div>
                 </div>
-                <div class="footer-info">
-                    <p>Excellence en impression 3D</p>
-                    <p>Votre partenaire créatif</p>
+
+                <!-- Navigation -->
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Impression 3D</a></li>
+                        <li><a href="catalogue.html">Catalogue & Tarifs</a></li>
+                        <li><a href="contact.html">Devis Gratuit</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spécialités -->
+                <div class="footer-section">
+                    <h4>Spécialités</h4>
+                    <ul class="footer-links">
+                        <li>Prototypage rapide</li>
+                        <li>Pièces mécaniques</li>
+                        <li>Objets décoratifs</li>
+                        <li>Pièces sur-mesure</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="footer-contact" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@justprint3d.fr" itemprop="email">contact@justprint3d.fr</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span itemprop="areaServed">France métropolitaine</span></p>
+                        <p><i class="fas fa-clock"></i> <span itemprop="hoursAvailable">Devis sous 24h</span></p>
+                    </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Just Printed. Tous droits réservés.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Just Printed - Impression 3D professionnelle. Tous droits réservés.</p>
+                    <div class="footer-links-legal">
+                        <a href="contact.html">Mentions légales</a>
+                        <a href="contact.html">CGV</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Just Printed",
+            "description": "Spécialiste en impression 3D professionnelle, prototypage rapide et fabrication de pièces sur-mesure. Technologies FDM/FFF, matériaux PLA, ABS, PETG, TPU.",
+            "email": "contact@justprint3d.fr",
+            "areaServed": "France",
+            "serviceType": "Impression 3D",
+            "priceRange": "€€",
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "sameAs": ["https://justprint3d.github.io"],
+            "offers": [
+                {
+                    "@type": "Service",
+                    "name": "Impression 3D FDM",
+                    "description": "Impression 3D professionnelle en PLA, ABS, PETG, TPU"
+                },
+                {
+                    "@type": "Service", 
+                    "name": "Prototypage rapide",
+                    "description": "Développement rapide de prototypes fonctionnels"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Pièces sur-mesure",
+                    "description": "Fabrication de pièces mécaniques et décoratives personnalisées"
+                }
+            ]
+        }
+        </script>
     </footer>
 
     <script src="script.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
+        // Initialiser EmailJS
+        emailjs.init('nE60oTfmfUB9DlX5w');
+
         // Contact form handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -299,7 +355,7 @@
                 return; // Bot détecté, ignore silencieusement
             }
 
-            // Simulation d'envoi (à remplacer par un vrai service)
+            // Animation du bouton
             const submitBtn = document.getElementById('submitBtn');
             const btnText = submitBtn.querySelector('.btn-text');
             const btnLoading = submitBtn.querySelector('.btn-loading');
@@ -308,71 +364,37 @@
             btnText.style.display = 'none';
             btnLoading.style.display = 'inline-flex';
 
-            // Simuler l'envoi
-            setTimeout(() => {
-                document.getElementById('contactForm').style.display = 'none';
-                document.getElementById('formSuccess').style.display = 'block';
-            }, 2000);
+            // Récupérer les données du formulaire
+            const formData = new FormData(this);
+            const templateParams = {
+                from_name: formData.get('firstName') + ' ' + formData.get('lastName'),
+                from_email: formData.get('email'),
+                phone: formData.get('phone') || 'Non renseigné',
+                company: formData.get('company') || 'Particulier',
+                service: formData.get('service'),
+                message: formData.get('message'),
+                deadline: formData.get('deadline') || 'Non spécifié',
+                to_name: 'Just Printed',
+                reply_to: formData.get('email')
+            };
+
+            // Envoyer avec EmailJS
+            emailjs.send('service_ikcxsnb', 'template_aavqejs', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('formSuccess').style.display = 'block';
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Erreur lors de l\'envoi du message. Veuillez réessayer ou nous contacter directement à contact@justprint3d.fr');
+                    
+                    // Restaurer le bouton
+                    submitBtn.disabled = false;
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                });
         });
 
-        // File upload handling
-        const fileInput = document.getElementById('files');
-        const fileList = document.getElementById('fileList');
-        const fileInputWrapper = document.querySelector('.file-input-wrapper');
-
-        fileInput.addEventListener('change', handleFileSelect);
-
-        // Drag and drop
-        fileInputWrapper.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            fileInputWrapper.classList.add('dragover');
-        });
-
-        fileInputWrapper.addEventListener('dragleave', () => {
-            fileInputWrapper.classList.remove('dragover');
-        });
-
-        fileInputWrapper.addEventListener('drop', (e) => {
-            e.preventDefault();
-            fileInputWrapper.classList.remove('dragover');
-            handleFileSelect({ target: { files: e.dataTransfer.files } });
-        });
-
-        function handleFileSelect(e) {
-            const files = Array.from(e.target.files);
-            fileList.innerHTML = '';
-            
-            files.forEach((file, index) => {
-                if (file.size > 10 * 1024 * 1024) { // 10MB limit
-                    alert(`Le fichier ${file.name} est trop volumineux (max 10MB)`);
-                    return;
-                }
-
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.innerHTML = `
-                    <i class="fas fa-file"></i>
-                    <span class="file-name">${file.name}</span>
-                    <span class="file-size">(${(file.size / 1024 / 1024).toFixed(2)} MB)</span>
-                    <button type="button" class="remove-file" onclick="removeFile(${index})">
-                        <i class="fas fa-times"></i>
-                    </button>
-                `;
-                fileList.appendChild(fileItem);
-            });
-        }
-
-        function removeFile(index) {
-            const dt = new DataTransfer();
-            const files = Array.from(fileInput.files);
-            
-            files.forEach((file, i) => {
-                if (i !== index) dt.items.add(file);
-            });
-            
-            fileInput.files = dt.files;
-            handleFileSelect({ target: { files: dt.files } });
-        }
 
         // Form validation
         const form = document.getElementById('contactForm');

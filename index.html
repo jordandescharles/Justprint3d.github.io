@@ -14,10 +14,9 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <div class="logo">
-                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="logo-img">
-                    <span class="logo-text">Just Printed</span>
-                </div>
+                <a href="index.html" class="logo">
+                    <img src="Logo-small-long.png" alt="Just Printed Logo" class="logo-img">
+                </a>
                 <div class="nav-menu">
                     <a href="index.html" class="nav-link active">Accueil</a>
                     <a href="catalogue.html" class="nav-link">Catalogue</a>
@@ -273,22 +272,95 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" itemscope itemtype="https://schema.org/LocalBusiness">
         <div class="container">
             <div class="footer-content">
+                <!-- Entreprise -->
+                <div class="footer-section">
                 <div class="footer-logo">
-                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="footer-logo-img">
-                    <p>Créations et Impressions 3D</p>
+                        <img src="Logo-small-long-footer.png" alt="Just Printed - Impression 3D professionnelle" class="footer-logo-img">
+                        <h3 itemprop="name">Just Printed</h3>
+                        <p itemprop="description">Spécialiste impression 3D, prototypage rapide, pièces sur-mesure. Service professionnel FDM/FFF - PLA, ABS, PETG, TPU.</p>
+                    </div>
                 </div>
-                <div class="footer-info">
-                    <p>Site en construction - Bientôt disponible</p>
-                    <p>Restez connectés pour plus d'informations</p>
+
+                <!-- Navigation -->
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Impression 3D</a></li>
+                        <li><a href="catalogue.html">Catalogue & Tarifs</a></li>
+                        <li><a href="contact.html">Devis Gratuit</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spécialités -->
+                <div class="footer-section">
+                    <h4>Spécialités</h4>
+                    <ul class="footer-links">
+                        <li>Prototypage rapide</li>
+                        <li>Pièces mécaniques</li>
+                        <li>Objets décoratifs</li>
+                        <li>Pièces sur-mesure</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="footer-contact" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@justprint3d.fr" itemprop="email">contact@justprint3d.fr</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span itemprop="areaServed">France métropolitaine</span></p>
+                        <p><i class="fas fa-clock"></i> <span itemprop="hoursAvailable">Devis sous 24h</span></p>
+                    </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Just Printed. Tous droits réservés.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Just Printed - Impression 3D professionnelle. Tous droits réservés.</p>
+                    <div class="footer-links-legal">
+                        <a href="contact.html">Mentions légales</a>
+                        <a href="contact.html">CGV</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Just Printed",
+            "description": "Spécialiste en impression 3D professionnelle, prototypage rapide et fabrication de pièces sur-mesure. Technologies FDM/FFF, matériaux PLA, ABS, PETG, TPU.",
+            "email": "contact@justprint3d.fr",
+            "areaServed": "France",
+            "serviceType": "Impression 3D",
+            "priceRange": "€€",
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "sameAs": ["https://justprint3d.github.io"],
+            "offers": [
+                {
+                    "@type": "Service",
+                    "name": "Impression 3D FDM",
+                    "description": "Impression 3D professionnelle en PLA, ABS, PETG, TPU"
+                },
+                {
+                    "@type": "Service", 
+                    "name": "Prototypage rapide",
+                    "description": "Développement rapide de prototypes fonctionnels"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Pièces sur-mesure",
+                    "description": "Fabrication de pièces mécaniques et décoratives personnalisées"
+                }
+            ]
+        }
+        </script>
     </footer>
 
     <!-- Image Modal -->

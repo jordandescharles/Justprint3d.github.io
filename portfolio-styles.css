@@ -45,35 +45,6 @@
     cursor: pointer;
 }
 
-.portfolio-item::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,0.9);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.8);
-    transition: all var(--duration-medium) ease;
-    z-index: 5;
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f065";
-    color: var(--primary-color);
-    font-size: 16px;
-    line-height: 40px;
-    text-align: center;
-}
-
-.portfolio-item:hover::before {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
 
 .portfolio-item:hover {
     transform: translateY(-8px);
@@ -294,30 +265,66 @@
     }
 }
 
-/* Benefits List Styling */
-.benefits-list {
-    list-style: none;
-    padding: 0;
-}
-
-.benefits-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: var(--space-3);
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-.benefits-list li i {
-    color: var(--primary-color);
-    margin-right: var(--space-3);
-    margin-top: 2px;
-    font-size: 0.85rem;
-    flex-shrink: 0;
-}
-
-.benefits-list li strong {
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-right: var(--space-2);
+/* Benefits List Mobile Improvements */
+@media (max-width: 768px) {
+    .benefits-list {
+        gap: var(--space-3);
+    }
+    
+    .benefits-list li {
+        padding: var(--space-3);
+        font-size: 0.85rem;
+        border-radius: var(--radius-md);
+        background: var(--white);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-left: 3px solid var(--primary-color);
+    }
+    
+    .benefits-list li i {
+        font-size: 1rem;
+        margin-right: var(--space-2);
+        margin-top: 1px;
+    }
+    
+    .benefits-list li strong {
+        display: block;
+        margin-bottom: var(--space-1);
+        font-size: 0.9rem;
+    }
+    
+    /* Product features improvements */
+    .product-features ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+    
+    .product-features ul li {
+        display: flex;
+        align-items: flex-start;
+        padding: var(--space-2) var(--space-3);
+        background: var(--white);
+        border-radius: var(--radius-md);
+        border-left: 3px solid var(--primary-color);
+        font-size: 0.85rem;
+        line-height: 1.4;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .product-features ul li i {
+        color: var(--primary-color);
+        margin-right: var(--space-2);
+        margin-top: 2px;
+        flex-shrink: 0;
+        font-size: 0.8rem;
+    }
+    
+    .product-features ul li strong {
+        margin-right: var(--space-1);
+    }
+    
+    .product-features h4 {
+        margin-bottom: var(--space-4);
+        font-size: 1.1rem;
+    }
 }
