@@ -3,36 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Printed - Bientôt disponible</title>
+    <title>Just Printed - Impression 3D & Création</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <div class="logo">
-                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="logo-img">
+                <a href="index.html" class="logo">
+                    <img src="Logo-small-long.png" alt="Just Printed Logo" class="logo-img">
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link active">Accueil</a>
+                    <a href="catalogue.html" class="nav-link">Catalogue</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section avec Parallax -->
+    <section class="hero" data-parallax="true">
+        <div class="hero-bg-overlay"></div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Bientôt disponible</h1>
-                <p class="hero-subtitle">Just Printed arrive très prochainement avec ses services d'impression 3D</p>
-                <div class="coming-soon">
-                    <div class="countdown">
-                        <span class="countdown-text">Site en construction</span>
-                    </div>
+                <h1 class="hero-title">L'impression 3D <span class="highlight">nouvelle génération</span></h1>
+                <p class="hero-subtitle">Donnez vie à vos idées avec nos imprimantes 3D de pointe et notre expertise en conception. De la modélisation à la réalisation, nous transformons vos projets en réalité.</p>
+                <div class="hero-buttons">
+                    <a href="catalogue.html" class="btn btn-primary">Découvrir nos services</a>
+                    <a href="contact.html" class="btn btn-secondary">Demander un devis</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="Logo-small.jpg" alt="Just Printed Logo" class="hero-logo">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Imprimante 3D Bambu A1" class="hero-main-img">
+                <div class="floating-elements">
+                    <div class="floating-element" data-speed="2"></div>
+                    <div class="floating-element" data-speed="3"></div>
+                    <div class="floating-element" data-speed="1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qu'est-ce que l'impression 3D Section -->
+    <section class="about-3d" data-parallax="bg">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Qu'est-ce que l'impression 3D ?</h2>
+                <p class="section-subtitle">Une révolution technologique qui transforme la façon dont nous créons</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="content-block">
+                        <h3>Une technologie révolutionnaire</h3>
+                        <p>L'impression 3D, aussi appelée fabrication additive, consiste à créer des objets physiques en superposant des couches de matériau. Cette technologie permet de produire des pièces complexes, personnalisées et fonctionnelles directement à partir d'un fichier numérique.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Pourquoi choisir l'impression 3D ?</h3>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-rocket"></i> <strong>Prototypage rapide :</strong> De l'idée à l'objet en quelques heures</li>
+                            <li><i class="fas fa-cog"></i> <strong>Personnalisation :</strong> Chaque pièce peut être unique</li>
+                            <li><i class="fas fa-leaf"></i> <strong>Économique :</strong> Réduction des coûts de production</li>
+                            <li><i class="fas fa-lightbulb"></i> <strong>Innovation :</strong> Formes impossibles avec les méthodes traditionnelles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-icon"><i class="fas fa-draw-polygon"></i></div>
+                            <h4>1. Conception</h4>
+                            <p>Modélisation 3D de votre projet</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fas fa-sliders-h"></i></div>
+                            <h4>2. Préparation</h4>
+                            <p>Optimisation et paramétrage</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fas fa-print"></i></div>
+                            <h4>3. Impression</h4>
+                            <p>Fabrication couche par couche</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon"><i class="fas fa-tools"></i></div>
+                            <h4>4. Finition</h4>
+                            <p>Post-traitement et livraison</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -40,46 +108,301 @@
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">Nos Services</h2>
+            <h2 class="section-title">Nos Expertises</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🖨️</div>
+                    <div class="service-icon"><i class="fas fa-print"></i></div>
                     <h3>Impression 3D</h3>
-                    <p>Prototypage rapide et production de pièces sur mesure avec nos imprimantes 3D de dernière génération.</p>
+                    <p>Prototypage rapide et production de pièces sur mesure avec nos imprimantes 3D de dernière génération. Technologies FDM haute précision disponibles.</p>
+                    <div class="service-features">
+                        <span class="feature">PLA</span>
+                        <span class="feature">ABS</span>
+                        <span class="feature">PETG</span>
+                        <span class="feature">TPU</span>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">✏️</div>
+                    <div class="service-icon"><i class="fas fa-cube"></i></div>
                     <h3>Conception 3D</h3>
-                    <p>Modélisation et design de vos projets avec des logiciels professionnels pour un résultat optimal.</p>
+                    <p>Modélisation et design de vos projets avec des logiciels professionnels pour un résultat optimal. De l'esquisse au fichier 3D prêt à imprimer.</p>
+                    <div class="service-features">
+                        <span class="feature">Fusion 360</span>
+                        <span class="feature">SolidWorks</span>
+                        <span class="feature">Blender</span>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Création graphique</h3>
-                    <p>Conception de logos, identités visuelles et supports graphiques pour valoriser votre image de marque.</p>
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Création Personnalisée</h3>
+                    <p>Objets décoratifs, lightboxes, pièces fonctionnelles... Nous donnons vie à toutes vos idées créatives avec une approche sur mesure.</p>
+                    <div class="service-features">
+                        <span class="feature">Lightbox</span>
+                        <span class="feature">Figurines</span>
+                        <span class="feature">Outillage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Réalisations</h2>
+                <p class="section-subtitle">Découvrez quelques-uns de nos projets récents, de la pièce fonctionnelle à l'objet décoratif</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Lightboxes -->
+                <div class="portfolio-category">
+                    <h3 class="category-title">Lightboxes Personnalisées</h3>
+                    <div class="portfolio-items">
+                        <div class="portfolio-item" data-category="lightbox">
+                            <img src="imgs/lightboxes/lightbox-wide.jpg" alt="Lightbox vue d'ensemble" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Lightbox LED</h4>
+                                <p>Éclairage uniforme et design moderne</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/lightboxes/lightbox-wide.jpg', 'Lightbox LED')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-item" data-category="lightbox">
+                            <img src="imgs/lightboxes/lightbox-detail.jpg" alt="Détail lightbox" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Détails & Finitions</h4>
+                                <p>Qualité de fabrication premium</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/lightboxes/lightbox-detail.jpg', 'Détails lightbox')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                
+                        <div class="portfolio-item" data-category="lightbox">
+                            <img src="imgs/lightboxes/lightbox-closeup.jpg" alt="Gros plan lightbox" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Précision des Détails</h4>
+                                <p>Qualité d'impression exceptionnelle</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/lightboxes/lightbox-closeup.jpg', 'Gros plan lightbox')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engrenages -->
+                <div class="portfolio-category">
+                    <h3 class="category-title">Pièces Mécaniques</h3>
+                    <div class="portfolio-items">
+                        <div class="portfolio-item" data-category="mechanical">
+                            <img src="imgs/engrenages/engre-wide.jpg" alt="Engrenages imprimés" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Engrenages Fonctionnels</h4>
+                                <p>Précision et durabilité</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/engrenages/engre-wide.jpg', 'Engrenages fonctionnels')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-item" data-category="mechanical">
+                            <img src="imgs/engrenages/engre-detail.jpg" alt="Détail engrenage" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Précision Mécanique</h4>
+                                <p>Tolérances serrées</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/engrenages/engre-detail.jpg', 'Détail engrenage')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-item" data-category="mechanical">
+                            <img src="imgs/engrenages/engre-closup.jpg" alt="Gros plan engrenage" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Qualité d'Impression</h4>
+                                <p>Surface lisse et précise</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/engrenages/engre-closup.jpg', 'Gros plan engrenage')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deck -->
+                <div class="portfolio-category">
+                    <h3 class="category-title">Objets Décoratifs</h3>
+                    <div class="portfolio-items">
+                        <div class="portfolio-item" data-category="decorative">
+                            <img src="imgs/deck/deck_wide.jpg" alt="Deck imprimé 3D" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Deck Personnalisé</h4>
+                                <p>Design unique et créatif</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/deck/deck_wide.jpg', 'Deck personnalisé')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-item" data-category="decorative">
+                            <img src="imgs/deck/deck_closeup.jpg" alt="Détail deck" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Finitions Soignées</h4>
+                                <p>Attention aux détails</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/deck/deck_closeup.jpg', 'Détail deck')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-cta">
+                <p>Vous avez un projet en tête ?</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">Discutons de votre projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies" data-parallax="bg">
+        <div class="container">
+            <h2 class="section-title">Nos Technologies</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="imgs/imprimante/imprimante.jpg" alt="Imprimante FDM">
+                    <h3>FDM/FFF</h3>
+                    <p>Technologie de dépôt de matière fondue, idéale pour le prototypage et les pièces fonctionnelles.</p>
+                </div>
+                <div class="tech-item">
+                    <img src="imgs/imprimante/filament.jpeg" alt="Filaments 3D">
+                    <h3>Matériaux Premium</h3>
+                    <p>Large gamme de filaments haute qualité pour tous types de projets, du prototype à la pièce finale.</p>
+                </div>
+                <div class="tech-item">
+                    <img src="imgs/imprimante/post-traitement.jpg" alt="Post-traitement">
+                    <h3>Post-traitement</h3>
+                    <p>Finitions, ponçage, peinture et assemblage pour un résultat professionnel.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" itemscope itemtype="https://schema.org/LocalBusiness">
         <div class="container">
             <div class="footer-content">
+                <!-- Entreprise -->
+                <div class="footer-section">
                 <div class="footer-logo">
-                    <img src="Logo-small.jpg" alt="Just Printed Logo" class="footer-logo-img">
-                    <p>Créations et Impressions 3D</p>
+                        <img src="Logo-small-long-footer.png" alt="Just Printed - Impression 3D professionnelle" class="footer-logo-img">
+                        <h3 itemprop="name">Just Printed</h3>
+                        <p itemprop="description">Spécialiste impression 3D, prototypage rapide, pièces sur-mesure. Service professionnel FDM/FFF - PLA, ABS, PETG, TPU.</p>
+                    </div>
                 </div>
-                <div class="footer-info">
-                    <p>Site en construction - Bientôt disponible</p>
-                    <p>Restez connectés pour plus d'informations</p>
+
+                <!-- Navigation -->
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Impression 3D</a></li>
+                        <li><a href="catalogue.html">Catalogue & Tarifs</a></li>
+                        <li><a href="contact.html">Devis Gratuit</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spécialités -->
+                <div class="footer-section">
+                    <h4>Spécialités</h4>
+                    <ul class="footer-links">
+                        <li>Prototypage rapide</li>
+                        <li>Pièces mécaniques</li>
+                        <li>Objets décoratifs</li>
+                        <li>Pièces sur-mesure</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="footer-contact" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@justprint3d.fr" itemprop="email">contact@justprint3d.fr</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span itemprop="areaServed">France métropolitaine</span></p>
+                        <p><i class="fas fa-clock"></i> <span itemprop="hoursAvailable">Devis sous 24h</span></p>
+                    </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Just Printed. Tous droits réservés.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Just Printed - Impression 3D professionnelle. Tous droits réservés.</p>
+                    <div class="footer-links-legal">
+                        <a href="contact.html">Mentions légales</a>
+                        <a href="contact.html">CGV</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Just Printed",
+            "description": "Spécialiste en impression 3D professionnelle, prototypage rapide et fabrication de pièces sur-mesure. Technologies FDM/FFF, matériaux PLA, ABS, PETG, TPU.",
+            "email": "contact@justprint3d.fr",
+            "areaServed": "France",
+            "serviceType": "Impression 3D",
+            "priceRange": "€€",
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "sameAs": ["https://justprint3d.github.io"],
+            "offers": [
+                {
+                    "@type": "Service",
+                    "name": "Impression 3D FDM",
+                    "description": "Impression 3D professionnelle en PLA, ABS, PETG, TPU"
+                },
+                {
+                    "@type": "Service", 
+                    "name": "Prototypage rapide",
+                    "description": "Développement rapide de prototypes fonctionnels"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Pièces sur-mesure",
+                    "description": "Fabrication de pièces mécaniques et décoratives personnalisées"
+                }
+            ]
+        }
+        </script>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div id="modalCaption"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Image modal functionality
+        function openImageModal(src, caption) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImg.src = src;
+            modalCaption.textContent = caption;
+        }
+
+        // Close modal
+        document.querySelector('.close-modal').addEventListener('click', function() {
+            document.getElementById('imageModal').style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('imageModal').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

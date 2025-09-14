@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Just Printed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Logo-small-long.png" alt="Just Printed Logo" class="logo-img">
+                </a>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="catalogue.html" class="nav-link">Catalogue</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Contact -->
+    <section class="contact-hero" data-parallax="true">
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="page-title">Contactez-nous</h1>
+                <p class="page-subtitle">Partagez votre projet, nous vous accompagnons de A à Z</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Accueil</a> <span>/</span> <span>Contact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2>Démarrons votre projet</h2>
+                        <p>Remplissez ce formulaire et nous vous recontacterons rapidement</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" action="#" method="POST">
+                        <!-- Honeypot pour les bots -->
+                        <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Entreprise</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectType">Type de projet *</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="impression">Service d'impression 3D</option>
+                                <option value="creation">Création/Conception 3D</option>
+                                <option value="lightbox">Lightbox personnalisée</option>
+                                <option value="prototype">Prototypage</option>
+                                <option value="series">Production en série</option>
+                                <option value="other">Autre projet</option>
+                            </select>
+                        </div>
+
+
+                       
+                        
+                        <div class="form-group">
+                            <label for="message">Description de votre projet *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet en détail : dimensions, matériaux souhaités, quantité, utilisation prévue..." required></textarea>
+                        </div>
+
+
+                        <!-- Protection anti-spam simple -->
+                        <div class="form-group anti-spam">
+                            <label for="antiSpam">Vérification anti-spam : Combien font 7 + 3 ? *</label>
+                            <input type="text" id="antiSpam" name="antiSpam" required placeholder="Entrez le résultat">
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                J'accepte que mes données soient utilisées pour me recontacter concernant ma demande *
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Je souhaite recevoir des informations sur les nouveautés et offres spéciales
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
+                                <span class="btn-text">Envoyer ma demande</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Envoi en cours...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <div class="success-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Merci pour votre message !</h3>
+                            <p>Nous avons bien reçu votre demande et vous recontacterons très prochainement.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>Informations de contact</h3>
+                            <p>Plusieurs moyens de nous joindre</p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Email</h4>
+                                    <p>contact@justprint3d.fr</p>
+                                    <small>Réponse rapide</small>
+                                </div>
+                            </div>
+
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Adresse</h4>
+                                    <p>123 Rue de l'Innovation<br>75001 Paris, France</p>
+                                    <small>Sur rendez-vous</small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>Pourquoi nous choisir ?</h3>
+                        </div>
+                        <div class="advantages">
+                            <div class="advantage">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>100% satisfaction client</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-tools"></i>
+                                <span>Équipements dernière génération</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-euro-sign"></i>
+                                <span>Tarifs compétitifs</span>
+                            </div>
+                            <div class="advantage">
+                                <i class="fas fa-headset"></i>
+                                <span>Support technique inclus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>FAQ Express</h3>
+                        </div>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <h4>Quels matériaux utilisez-vous ?</h4>
+                                <p>PLA, ABS, PETG, TPU et matériaux spéciaux</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Retrait possible ?</h4>
+                                <p>Oui, sur rendez-vous</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Formats de fichiers ?</h4>
+                                <p>STL, OBJ, 3MF principalement</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Devis gratuit ?</h4>
+                                <p>Toujours, sans engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Entreprise -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="Logo-small-long-footer.png" alt="Just Printed - Impression 3D professionnelle" class="footer-logo-img">
+                        <h3 itemprop="name">Just Printed</h3>
+                        <p itemprop="description">Spécialiste impression 3D, prototypage rapide, pièces sur-mesure. Service professionnel FDM/FFF - PLA, ABS, PETG, TPU.</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Impression 3D</a></li>
+                        <li><a href="catalogue.html">Catalogue & Tarifs</a></li>
+                        <li><a href="contact.html">Devis Gratuit</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Spécialités -->
+                <div class="footer-section">
+                    <h4>Spécialités</h4>
+                    <ul class="footer-links">
+                        <li>Prototypage rapide</li>
+                        <li>Pièces mécaniques</li>
+                        <li>Objets décoratifs</li>
+                        <li>Pièces sur-mesure</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="footer-contact" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@justprint3d.fr" itemprop="email">contact@justprint3d.fr</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span itemprop="areaServed">France métropolitaine</span></p>
+                        <p><i class="fas fa-clock"></i> <span itemprop="hoursAvailable">Devis sous 24h</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Just Printed - Impression 3D professionnelle. Tous droits réservés.</p>
+                    <div class="footer-links-legal">
+                        <a href="contact.html">Mentions légales</a>
+                        <a href="contact.html">CGV</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Just Printed",
+            "description": "Spécialiste en impression 3D professionnelle, prototypage rapide et fabrication de pièces sur-mesure. Technologies FDM/FFF, matériaux PLA, ABS, PETG, TPU.",
+            "email": "contact@justprint3d.fr",
+            "areaServed": "France",
+            "serviceType": "Impression 3D",
+            "priceRange": "€€",
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "sameAs": ["https://justprint3d.github.io"],
+            "offers": [
+                {
+                    "@type": "Service",
+                    "name": "Impression 3D FDM",
+                    "description": "Impression 3D professionnelle en PLA, ABS, PETG, TPU"
+                },
+                {
+                    "@type": "Service", 
+                    "name": "Prototypage rapide",
+                    "description": "Développement rapide de prototypes fonctionnels"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Pièces sur-mesure",
+                    "description": "Fabrication de pièces mécaniques et décoratives personnalisées"
+                }
+            ]
+        }
+        </script>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialiser EmailJS
+        emailjs.init('nE60oTfmfUB9DlX5w');
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Vérification anti-spam
+            const antiSpam = document.getElementById('antiSpam').value;
+            if (antiSpam !== "10") {
+                alert('Erreur de vérification anti-spam.');
+                return;
+            }
+
+            // Vérification honeypot
+            const honeypot = document.querySelector('input[name="website"]').value;
+            if (honeypot !== "") {
+                return; // Bot détecté, ignore silencieusement
+            }
+
+            // Animation du bouton
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+
+            // Récupérer les données du formulaire
+            const formData = new FormData(this);
+            const templateParams = {
+                from_name: formData.get('firstName') + ' ' + formData.get('lastName'),
+                from_email: formData.get('email'),
+                phone: formData.get('phone') || 'Non renseigné',
+                company: formData.get('company') || 'Particulier',
+                service: formData.get('service'),
+                message: formData.get('message'),
+                deadline: formData.get('deadline') || 'Non spécifié',
+                to_name: 'Just Printed',
+                reply_to: formData.get('email')
+            };
+
+            // Envoyer avec EmailJS
+            emailjs.send('service_ikcxsnb', 'template_aavqejs', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('formSuccess').style.display = 'block';
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Erreur lors de l\'envoi du message. Veuillez réessayer ou nous contacter directement à contact@justprint3d.fr');
+                    
+                    // Restaurer le bouton
+                    submitBtn.disabled = false;
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                });
+        });
+
+
+        // Form validation
+        const form = document.getElementById('contactForm');
+        const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+
+        inputs.forEach(input => {
+            input.addEventListener('blur', validateField);
+            input.addEventListener('input', clearError);
+        });
+
+        function validateField(e) {
+            const field = e.target;
+            const value = field.value.trim();
+            
+            field.classList.remove('error');
+            
+            if (!value && field.required) {
+                showFieldError(field, 'Ce champ est obligatoire');
+                return false;
+            }
+            
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    showFieldError(field, 'Email invalide');
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+
+        function showFieldError(field, message) {
+            field.classList.add('error');
+            let errorMsg = field.parentNode.querySelector('.error-message');
+            if (!errorMsg) {
+                errorMsg = document.createElement('span');
+                errorMsg.className = 'error-message';
+                field.parentNode.appendChild(errorMsg);
+            }
+            errorMsg.textContent = message;
+        }
+
+        function clearError(e) {
+            const field = e.target;
+            field.classList.remove('error');
+            const errorMsg = field.parentNode.querySelector('.error-message');
+            if (errorMsg) errorMsg.remove();
+        }
+    </script>
+</body>
+</html>
