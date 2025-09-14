@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just Printed - Impression 3D & Création</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -41,20 +42,6 @@
                 <div class="hero-buttons">
                     <a href="catalogue.html" class="btn btn-primary">Découvrir nos services</a>
                     <a href="contact.html" class="btn btn-secondary">Demander un devis</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Projets réalisés</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">24h</span>
-                        <span class="stat-label">Délai moyen</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Satisfaction client</span>
-                    </div>
                 </div>
             </div>
             <div class="hero-image">
@@ -159,23 +146,125 @@
         </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Réalisations</h2>
+                <p class="section-subtitle">Découvrez quelques-uns de nos projets récents, de la pièce fonctionnelle à l'objet décoratif</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Lightboxes -->
+                <div class="portfolio-category">
+                    <h3 class="category-title">Lightboxes Personnalisées</h3>
+                    <div class="portfolio-items">
+                        <div class="portfolio-item" data-category="lightbox">
+                            <img src="imgs/lightboxes/lightbox-wide.jpg" alt="Lightbox vue d'ensemble" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Lightbox LED</h4>
+                                <p>Éclairage uniforme et design moderne</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/lightboxes/lightbox-wide.jpg', 'Lightbox LED')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-item" data-category="lightbox">
+                            <img src="imgs/lightboxes/lightbox-detail.jpg" alt="Détail lightbox" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Détails & Finitions</h4>
+                                <p>Qualité de fabrication premium</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/lightboxes/lightbox-detail.jpg', 'Détails lightbox')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                
+                        <div class="portfolio-item" data-category="lightbox">
+                            <img src="imgs/lightboxes/lightbox-closeup.jpg" alt="Gros plan lightbox" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Précision des Détails</h4>
+                                <p>Qualité d'impression exceptionnelle</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/lightboxes/lightbox-closeup.jpg', 'Gros plan lightbox')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engrenages -->
+                <div class="portfolio-category">
+                    <h3 class="category-title">Pièces Mécaniques</h3>
+                    <div class="portfolio-items">
+                        <div class="portfolio-item" data-category="mechanical">
+                            <img src="imgs/engrenages/engre-wide.jpg" alt="Engrenages imprimés" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Engrenages Fonctionnels</h4>
+                                <p>Précision et durabilité</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/engrenages/engre-wide.jpg', 'Engrenages fonctionnels')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-item" data-category="mechanical">
+                            <img src="imgs/engrenages/engre-detail.jpg" alt="Détail engrenage" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Précision Mécanique</h4>
+                                <p>Tolérances serrées</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/engrenages/engre-detail.jpg', 'Détail engrenage')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-item" data-category="mechanical">
+                            <img src="imgs/engrenages/engre-closup.jpg" alt="Gros plan engrenage" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Qualité d'Impression</h4>
+                                <p>Surface lisse et précise</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/engrenages/engre-closup.jpg', 'Gros plan engrenage')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deck -->
+                <div class="portfolio-category">
+                    <h3 class="category-title">Objets Décoratifs</h3>
+                    <div class="portfolio-items">
+                        <div class="portfolio-item" data-category="decorative">
+                            <img src="imgs/deck/deck_wide.jpg" alt="Deck imprimé 3D" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Deck Personnalisé</h4>
+                                <p>Design unique et créatif</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/deck/deck_wide.jpg', 'Deck personnalisé')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-item" data-category="decorative">
+                            <img src="imgs/deck/deck_closeup.jpg" alt="Détail deck" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <h4>Finitions Soignées</h4>
+                                <p>Attention aux détails</p>
+                                <button class="btn btn-sm" onclick="openImageModal('imgs/deck/deck_closeup.jpg', 'Détail deck')"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-cta">
+                <p>Vous avez un projet en tête ?</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">Discutons de votre projet</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Technologies Section -->
     <section class="technologies" data-parallax="bg">
         <div class="container">
             <h2 class="section-title">Nos Technologies</h2>
             <div class="tech-grid">
                 <div class="tech-item">
-                    <img src="https://images.unsplash.com/photo-1606584132732-9e93f4a4e4c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Imprimante FDM">
+                    <img src="imgs/imprimante/imprimante.jpg" alt="Imprimante FDM">
                     <h3>FDM/FFF</h3>
                     <p>Technologie de dépôt de matière fondue, idéale pour le prototypage et les pièces fonctionnelles.</p>
                 </div>
                 <div class="tech-item">
-                    <img src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Filaments 3D">
+                    <img src="imgs/imprimante/filament.jpeg" alt="Filaments 3D">
                     <h3>Matériaux Premium</h3>
                     <p>Large gamme de filaments haute qualité pour tous types de projets, du prototype à la pièce finale.</p>
                 </div>
                 <div class="tech-item">
-                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Post-traitement">
+                    <img src="imgs/imprimante/post-traitement.jpg" alt="Post-traitement">
                     <h3>Post-traitement</h3>
                     <p>Finitions, ponçage, peinture et assemblage pour un résultat professionnel.</p>
                 </div>
@@ -202,6 +291,46 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div id="modalCaption"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Image modal functionality
+        function openImageModal(src, caption) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImg.src = src;
+            modalCaption.textContent = caption;
+        }
+
+        // Close modal
+        document.querySelector('.close-modal').addEventListener('click', function() {
+            document.getElementById('imageModal').style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('imageModal').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -553,13 +553,11 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
 }
 
 .benefits-list li {
     display: flex;
     align-items: flex-start;
-    gap: var(--space-3);
     padding: var(--space-4);
     background: var(--bg-secondary);
     border-radius: var(--radius-lg);
@@ -642,7 +640,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
-.service-card::before {
+/* .service-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -650,7 +648,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     height: 4px;
     background: var(--gradient-primary);
-}
+} */
 
 .service-card:hover {
     transform: translateY(-8px);
@@ -1654,9 +1652,9 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
     }
     
-    .hero-stats {
-        justify-content: center;
-        flex-wrap: wrap;
+    .hero {
+        margin: var(--space-4) 0;
+        padding: var(--space-16) 0;
     }
     
     .process-steps {
